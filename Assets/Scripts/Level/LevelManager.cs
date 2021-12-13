@@ -10,11 +10,7 @@ namespace Level
     {
         public GameObject[] PlanePrefabs;
         public GameObject StartPlane;
-        public GameObject EndPlane;
-
-        public int MinCount = 2;
-        public int MaxCount = 5;
-
+        
         private Vector3 _spawnPosition = new Vector3(0, 0, 0);
         private float _planeLenght = 100;
 
@@ -27,7 +23,7 @@ namespace Level
             //Instantiate(EndPlane);
         }
 
-        private void SpawnPlane()
+        public void SpawnPlane()
         {
             //int count = Random.Range(MinCount, MaxCount);
 
@@ -43,7 +39,7 @@ namespace Level
                     plane.transform.position = _spawnPosition + new Vector3(_planeLenght, 0, 0);
                     _spawnPosition = plane.transform.position;
                 }
-                
+                else
                 {
                     GameObject plane = Instantiate(PlanePrefabs[randomPlane]);
                     plane.transform.position = _spawnPosition + new Vector3(0, 0, _planeLenght);

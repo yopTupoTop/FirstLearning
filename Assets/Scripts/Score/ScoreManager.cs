@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Level;
 
 public class ScoreManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform Player;
+    public Text ScoreText;
 
-    // Update is called once per frame
+    //private int _direction = LevelManager.random
     void Update()
     {
-        
+        /*if (LevelManager.randomDirection == 0)
+        {
+            ScoreText.text = Player.position.x.ToString("0");
+        }
+        else*/
+        {
+            ScoreText.text = Player.position.z.ToString("0");
+        }
+        Debug.Log(Player.position.z);
     }
 }
