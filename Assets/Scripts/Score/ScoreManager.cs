@@ -12,14 +12,16 @@ public class ScoreManager : MonoBehaviour
     //private int _direction = LevelManager.random
     void Update()
     {
-        /*if (LevelManager.randomDirection == 0)
+        if (LevelManager.lastDirection == 0)
         {
             ScoreText.text = Player.position.x.ToString("0");
+            Debug.Log(Player.position.x);
         }
-        else*/
+        else
         {
             ScoreText.text = Player.position.z.ToString("0");
+            Debug.Log(Player.position.z);
         }
-        Debug.Log(Player.position.z);
+        
     }
 }

@@ -36,4 +36,10 @@ public class PlayerController : MonoBehaviour
             _player.velocity = new Vector3(0, 0, _speed);
         }
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
+            Debug.Log("It's obstacle");
+    }
 }

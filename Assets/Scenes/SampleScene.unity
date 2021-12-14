@@ -298,9 +298,6 @@ MonoBehaviour:
   - {fileID: 1830243129723735884, guid: a1283b2f83e514143976b334c9c2dfa3, type: 3}
   - {fileID: 1830243129723735884, guid: 20ab0f5c17bb5794793873854c6bfad3, type: 3}
   StartPlane: {fileID: 1830243129723735884, guid: bffc977062f432143a46146a14338ae5, type: 3}
-  EndPlane: {fileID: 1830243129723735884, guid: 68193872ef1796f46a4d3f13df081902, type: 3}
-  MinCount: 2
-  MaxCount: 5
 --- !u!4 &443484546
 Transform:
   m_ObjectHideFlags: 0
