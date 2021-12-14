@@ -1,0 +1,16 @@
+{
+    "name": "Score",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0c41d870168137c49a3ae8964ad55b10"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
