@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public UnityEvent OnDeath;
+    public UnityEvent OnStart;
     void Start()
     {
         PlayerController.OnDie += PlayerOnDeath;
@@ -16,9 +17,13 @@ public class GameManager : MonoBehaviour
     private void PlayerOnDeath()
     {
         Time.timeScale = 0f;
-        OnDeath?.Invoke();
     }
 
+    public void StartGame()
+    {
+        OnStart?.Invoke();
+        Debug.Log("Start Game");
+    }
     public void Restart()
     {
         SceneManager.LoadScene(0);

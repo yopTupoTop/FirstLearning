@@ -10,16 +10,6 @@ public class ScoreManager : MonoBehaviour
     public Text ScoreText;
     void Update()
     {
-        if (LevelManager.lastDirection == 0)
-        {
-            ScoreText.text = Player.position.x.ToString("0");
-            Debug.Log(Player.position.x);
-        }
-        else
-        {
-            ScoreText.text = Player.position.z.ToString("0");
-            Debug.Log(Player.position.z);
-        }
-        
+        ScoreText.text = Player.position.x.ToString("0") + Player.position.z.ToString("0");
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Level;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -13,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public delegate void ReturnVoid();
 
     public static event ReturnVoid OnDie;
-    
 
     private void Start()
     {
@@ -64,5 +64,6 @@ public class PlayerController : MonoBehaviour
     {
         OnDie?.Invoke();
         Debug.Log("Player is dead");
+        
     }
 }
