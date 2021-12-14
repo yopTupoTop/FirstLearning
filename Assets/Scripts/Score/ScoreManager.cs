@@ -8,8 +8,6 @@ public class ScoreManager : MonoBehaviour
 {
     public Transform Player;
     public Text ScoreText;
-
-    //private int _direction = LevelManager.random
     void Update()
     {
         if (LevelManager.lastDirection == 0)

@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     private bool _isMovingRight;
     [SerializeField] private float _speed;
 
+    public delegate void ReturnVoid();
+
+    public static event ReturnVoid OnDie;
+    
+
     private void Start()
     {
         _player.GetComponent<Rigidbody>();
@@ -35,11 +40,29 @@ public class PlayerController : MonoBehaviour
         {
             _player.velocity = new Vector3(0, 0, _speed);
         }
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 5f) && hit.transform.gameObject.tag == "Graund")
+        {
+            _player.useGravity = false;
+        }
+        else
+        {
+            _player.useGravity = true;
+            Die();
+        }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Obstacle")
             Debug.Log("It's obstacle");
+        Die();
+    }
+
+    public void Die()
+    {
+        OnDie?.Invoke();
+        Debug.Log("Player is dead");
     }
 }
